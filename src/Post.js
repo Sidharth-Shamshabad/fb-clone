@@ -7,6 +7,8 @@ import { AccountCircle, ExpandMoreOutlined } from '@material-ui/icons';
 import './Post.css';
 
 function Post({ profilePic, image, username, timestamp, message }) {
+    const correct_timestamp = new Date(timestamp?.toDate()).toUTCString();
+    console.log(username);
     return (
         <div className="post">
             <div className="post__top">
@@ -15,8 +17,8 @@ function Post({ profilePic, image, username, timestamp, message }) {
                     className="post__avatar"
                 />
                 <div className="post__topInfo">
-                    <h3>{username}</h3>
-                    <p>Timestamp</p>
+                    <h3> {username} </h3>
+                    <p>{correct_timestamp}</p>
                 </div>
             </div>
             
